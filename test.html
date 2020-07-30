@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #filter > div{
+            display: none;
+            border: 1px solid;
+            padding: 10px;
+            margin: 5px;
+        }
+        #filter.a > .a, #filter.b > .b, 
+        #filter.c > .c, #filter.d > .d,
+        #filter.all > div  {
+            display: unset;
+        } 
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="buttons" >
+        <button>all</button>
+        <button>a</button>
+        <button>b</button>
+        <button>c</button>
+        <button>d</button> 
+    </div>
+    
+    <div class="all" id="filter">
+        <div class="a c">1</div>
+        <div class="a b">2</div>
+        <div class="a">3</div>
+        <div class="a b c d">4</div>
+        <div class="a">5</div>
+        <div class="a">6</div>
+        <div class="b">7</div>
+        <div class="b c">8</div>
+        <div class="b a">9</div>
+        <div class="b d">10</div>
+        <div class="c">11</div>
+        <div class="c">12</div>
+        <div class="c">13</div>
+        <div class="c">14</div>
+        <div class="d">15</div>
+        <div class="d">16</div>
+        <div class="d">17</div>
+        <div class="d">18</div>
+        <div class="d">19</div>
+        <div class="d">20</div>
+    </div>
+
+    <script>
+        buttons.onclick = function (e) {
+            if (e.target.tagName == "BUTTON")
+                filter.className = e.target.innerText
+
+        }
+
+    </script>
+
+</body>
+</html>
